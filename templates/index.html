@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Duch a diamant</title>
+        <link href="/static/style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Duch a diamant</h1>
+        </header>
+        <div id="game">
+            <div id="hud">
+                <div>
+                    <span id="totalScore">Score: 0</span>
+                </div>
+
+                <div>
+                    <span id="maxStreak">Max. streak: 0</span>
+                </div>
+
+                <div>
+                    <span id="lifeCount">Lives: 3</span>
+                </div>
+
+                <div>
+                    <span id="time">Time: 00:00</span>
+                </div>
+            </div>
+
+            <div>
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div>
+                <table id="eventLog"></table>
+            </div>
+        </div>
+
+        <div>
+            <button id="aboutButton">About</button>
+            <button id="highScoresButton">High Scores</button>
+        </div>
+
+        <div id="about">
+            <p>Here was supposed to be some explanation of the game’s backstory or at least ghost’s origin, but I couldn’t think of any. The idea of ghost chasing a diamond is just so ridiculous. Why would he (or she) do it? Is it because he was so materialistic in life, so even after his death he craves for wealth and earthly possessions? Or was he a young gentleman planning to propose to his beautiful lady, but then she tragically died right before he could do it, so now this diamond from the engagement ring is the only remainder of the deep love he once felt to her. Or is the diamond giving him some other kind of pleasure? And what is the meaning of all these flame demons? I really don’t know.</p>
+            <p>Anyway, your task is to help the ghost enjoy his diamond for as long as possible while avoiding evil flame demons floating in the room, using only your arrow keys. But beware! After three collisions with the demons, your ghost will die for good and the game will be over.</p>
+            <p>Good luck, have fun and thanks for playing. I'm looking forward to see your high score in the table.</p>
+            <footer>
+                <p>Graphics from assets packs made by Pixel_Poem, Kyrise and Finalbossblues </p>
+                <p>Created by Ondrej Plechac as a final project for CS50x</p>
+            </footer>
+        </div>
+
+        <div>
+            <table id="highScores">
+                <thead>
+                    <tr>
+                        <td>NAME</td>
+                        <td>SCORE</td>
+                        <td>MAX. STREAK</td>
+                        <td>TIME</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for row in highscores %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <script src="/static/game.js"></script>
+        <script src="/static/buttons.js"></script>
+    </body>
+</html>
