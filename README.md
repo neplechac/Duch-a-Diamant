@@ -2,6 +2,8 @@
 
 Duch a diamant (Ghost and a Diamond) is a simple browser-based game in which your task is to help the ghost catch the diamond while avoiding flame demons flying all over the room. You get score points for keeping contact with the diamond and the goal is to score as many points as possible. Game ends when player has no lives left.
 
+[LIVE DEMO](http://neplechac.pythonanywhere.com/)
+
 ![Screenshot](https://i.ibb.co/hfKGXVs/duch.png)
 
 ### Gameplay and controls
